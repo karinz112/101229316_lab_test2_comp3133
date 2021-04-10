@@ -1,0 +1,14 @@
+<div style="display: flex;align-items: center;justify-content: center;flex-direction: column;">
+  <div style="display: flex;align-items: center;justify-content: center;flex-direction: column;" *ngFor="let item of info" [routerLink] = "['/itemdetails', item.flight_number]" routerLinkActive = "active">
+    <span style="font-size: 35px;">
+      {{ item.mission_name }} - {{ item.launch_year }}
+      </span>
+
+    <br>
+
+    <span style="text-align: center;">{{ item.details }}</span>
+
+      <img style="border: 2px solid rgb(119, 241, 221); border-radius: 4px; padding: 5px;"
+      width="300" height="300" alt="patch" [src]= "item.links.mission_patch_small">
+  </div>
+</div>
